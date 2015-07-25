@@ -13,13 +13,12 @@ iOS 7.0
 
 First import KTThenAndNowView.h to your controller
 
-> #import KTThenAndNowView.h
+```
+#import KTThenAndNowView.h
+```
 
 And create a KTThenAndNowView with code below.
 
-> KTThenAndNowView *thenAndNowView = [[KTThenAndNowView alloc] initWithFrame:frame
->firstImage:[UIImage imageNamed:@"image1"]
->secondImage:[UIImage imageNamed:@"image2"]
->isVertical:NO];
->[self.view addSubview:thenAndNowView];
-
+```
+KTThenAndNowView *thenAndNowView = [[KTThenAndNowView alloc] initWithFrame:frame firstImage:[UIImage imageNamed:@"image1"] secondImage:[UIImage imageNamed:@"image2"] isVertical:NO]; [self.view addSubview:thenAndNowView];
+```
