@@ -62,7 +62,12 @@
                     }
                 }
                 
-                UIImage *croppedImage = [self croppWithImage:image toRect:CGRectMake(i, 0, 1, image.size.height)];
+                UIImage *croppedImage;
+                if (isVertical) {
+                    croppedImage = [self croppWithImage:image toRect:CGRectMake(0, i, image.size.width, 1)];
+                } else {
+                    croppedImage = [self croppWithImage:image toRect:CGRectMake(i, 0, 1, image.size.height)];
+                }
                 [lineView setImage:croppedImage];
                 [lineView setClipsToBounds:YES];
                 
@@ -93,7 +98,7 @@
 
 - (void)onDragButton:(UIPanGestureRecognizer *)recognizer
 {
-    CGPoint touchPoint = [recognizer locationInView:self.superview];
+    CGPoint touchPoint = [recognizer locationInView:self];
     //NSLog(@"Current position: %@", NSStringFromCGPoint(touchPoint));
     
     if (isVerticalDrag && touchPoint.y > -18 && touchPoint.y < sizeLimitDrag) {
@@ -104,7 +109,7 @@
         [self hideAndShowImages];
     }
     
-    //NSLog(@"Drag button position: %@", NSStringFromCGRect(dragButton.frame));
+    NSLog(@"Drag button position: %@", NSStringFromCGRect(dragButton.frame));
 }
 
 - (void)hideAndShowImages {
@@ -120,13 +125,13 @@
             }
         } else {
             if (i < dragButton.center.x * 1000) {
-                imageView.alpha = 0;
+                imageView.alpha = 0.f;
             } else {
-                imageView.alpha = 1;
+                imageView.alpha = 1.f;
             }
         }
     
-        //NSLog(@"ImageView loop elemant at: %@", imageView);
+        NSLog(@"ImageView loop elemant at: %@", imageView);
     }
 }
 
