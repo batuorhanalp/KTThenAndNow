@@ -2,7 +2,7 @@
 
 A tool to show differences between two images.
 
-![KTThenAndNowView](/Example/horizontal_drag.gif)
+![KTThenAndNowView](http://i.imgur.com/03DeGkX.gif)
 
 ## Requirements
 
