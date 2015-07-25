@@ -14,6 +14,9 @@
 		4709E42B1B5FDD2E00514093 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4709E42A1B5FDD2E00514093 /* Images.xcassets */; };
 		4709E42E1B5FDD2E00514093 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4709E42C1B5FDD2E00514093 /* LaunchScreen.xib */; };
 		4709E43A1B5FDD2E00514093 /* KTThenAndNowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4709E4391B5FDD2E00514093 /* KTThenAndNowTests.m */; };
+		4709E4461B5FDDBE00514093 /* KTThenAndNowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4709E4451B5FDDBE00514093 /* KTThenAndNowView.m */; };
+		47C775F61B63C62A00221DE2 /* KTDragButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C775F51B63C62A00221DE2 /* KTDragButton.m */; };
+		47C775F81B63F2D700221DE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C775F71B63F2D700221DE2 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		4709E4331B5FDD2E00514093 /* KTThenAndNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTThenAndNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4709E4381B5FDD2E00514093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4709E4391B5FDD2E00514093 /* KTThenAndNowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTThenAndNowTests.m; sourceTree = "<group>"; };
+		4709E4441B5FDDBE00514093 /* KTThenAndNowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTThenAndNowView.h; path = Views/KTThenAndNowView.h; sourceTree = "<group>"; };
+		4709E4451B5FDDBE00514093 /* KTThenAndNowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTThenAndNowView.m; path = Views/KTThenAndNowView.m; sourceTree = "<group>"; };
+		47C775F41B63C62A00221DE2 /* KTDragButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTDragButton.h; path = Views/KTDragButton.h; sourceTree = "<group>"; };
+		47C775F51B63C62A00221DE2 /* KTDragButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTDragButton.m; path = Views/KTDragButton.m; sourceTree = "<group>"; };
+		47C775F71B63F2D700221DE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C775F81B63F2D700221DE2 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,7 @@
 		4709E4111B5FDD2E00514093 = {
 			isa = PBXGroup;
 			children = (
+				47C775F71B63F2D700221DE2 /* UIKit.framework */,
 				4709E41C1B5FDD2E00514093 /* KTThenAndNow */,
 				4709E4361B5FDD2E00514093 /* KTThenAndNowTests */,
 				4709E41B1B5FDD2E00514093 /* Products */,
@@ -81,6 +91,7 @@
 		4709E41C1B5FDD2E00514093 /* KTThenAndNow */ = {
 			isa = PBXGroup;
 			children = (
+				4709E4431B5FDD9300514093 /* Views */,
 				4709E4211B5FDD2E00514093 /* AppDelegate.h */,
 				4709E4221B5FDD2E00514093 /* AppDelegate.m */,
 				4709E4241B5FDD2E00514093 /* ViewController.h */,
@@ -117,6 +128,17 @@
 				4709E4381B5FDD2E00514093 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4709E4431B5FDD9300514093 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4709E4441B5FDDBE00514093 /* KTThenAndNowView.h */,
+				4709E4451B5FDDBE00514093 /* KTThenAndNowView.m */,
+				47C775F41B63C62A00221DE2 /* KTDragButton.h */,
+				47C775F51B63C62A00221DE2 /* KTDragButton.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C775F61B63C62A00221DE2 /* KTDragButton.m in Sources */,
 				4709E4261B5FDD2E00514093 /* ViewController.m in Sources */,
+				4709E4461B5FDDBE00514093 /* KTThenAndNowView.m in Sources */,
 				4709E4231B5FDD2E00514093 /* AppDelegate.m in Sources */,
 				4709E4201B5FDD2E00514093 /* main.m in Sources */,
 			);
@@ -418,6 +442,7 @@
 				4709E43F1B5FDD2E00514093 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4709E4401B5FDD2E00514093 /* Build configuration list for PBXNativeTarget "KTThenAndNowTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +451,7 @@
 				4709E4421B5FDD2E00514093 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
